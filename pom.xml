@@ -14,8 +14,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jakartaee.version>10.0.0</jakartaee.version>
+        <hibernate.version>6.6.50.Final</hibernate.version>
+        <liquibase.version>5.0.2</liquibase.version>
         <payara.micro.maven.plugin.version>2.5.1</payara.micro.maven.plugin.version>
         <payara.micro.version>6.2025.11</payara.micro.version>
+        <postgresql.version>42.7.11</postgresql.version>
     </properties>
 
     <dependencies>
@@ -24,6 +27,23 @@
             <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>${jakartaee.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 

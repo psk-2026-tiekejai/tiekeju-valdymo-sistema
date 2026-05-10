@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN"
+        "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-connection-pool name="tiekejaiPool"
+                          res-type="javax.sql.DataSource"
+                          datasource-classname="org.postgresql.ds.PGSimpleDataSource">
+        <property name="serverName" value="localhost"/>
+        <property name="portNumber" value="5432"/>
+        <property name="databaseName" value="tiekejai_db"/>
+        <property name="user" value="tiekejai"/>
+        <property name="password" value="tiekejai_dev"/>
+    </jdbc-connection-pool>
+
+    <jdbc-resource jndi-name="java:app/jdbc/tiekejaiDS"
+                   pool-name="tiekejaiPool"
+                   enabled="true"/>
+</resources>
