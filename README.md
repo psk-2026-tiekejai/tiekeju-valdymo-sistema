@@ -25,3 +25,23 @@ Expected response:
 ```json
 {"status":"ok"}
 ```
+
+## Database
+
+Start PostgreSQL:
+
+```bash
+docker compose up -d
+```
+
+Stop PostgreSQL:
+
+```bash
+docker compose down
+```
+
+Connect with psql:
+
+```bash
+docker compose exec postgres psql -U tiekejai -d tiekejai_db
+```
