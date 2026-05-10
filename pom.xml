@@ -14,12 +14,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jakartaee.version>10.0.0</jakartaee.version>
+        <jakarta.faces.version>4.0.1</jakarta.faces.version>
         <hibernate.version>6.6.50.Final</hibernate.version>
         <junit.jupiter.version>5.14.4</junit.jupiter.version>
         <liquibase.version>5.0.2</liquibase.version>
         <maven.surefire.plugin.version>3.5.5</maven.surefire.plugin.version>
         <payara.micro.maven.plugin.version>2.5.1</payara.micro.maven.plugin.version>
         <payara.micro.version>6.2025.11</payara.micro.version>
+        <primefaces.version>15.0.15</primefaces.version>
         <postgresql.version>42.7.11</postgresql.version>
         <testcontainers.version>2.0.5</testcontainers.version>
         <yasson.version>3.0.4</yasson.version>
@@ -43,6 +45,18 @@
             <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>${jakartaee.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.faces</groupId>
+            <artifactId>jakarta.faces-api</artifactId>
+            <version>${jakarta.faces.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>${primefaces.version}</version>
+            <classifier>jakarta</classifier>
         </dependency>
         <dependency>
             <groupId>org.hibernate.orm</groupId>

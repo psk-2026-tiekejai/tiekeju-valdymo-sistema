@@ -26,6 +26,11 @@ Expected response:
 {"status":"ok"}
 ```
 
+Open the application pages:
+
+- http://localhost:8080/
+- http://localhost:8080/suppliers/list.xhtml
+
 ## Database
 
 Start PostgreSQL:
