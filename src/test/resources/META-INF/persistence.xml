@@ -3,16 +3,13 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
              version="3.1">
-    <persistence-unit name="tiekejaiPU" transaction-type="JTA">
+    <persistence-unit name="tiekejaiTestPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:app/jdbc/tiekejaiDS</jta-data-source>
+        <class>lt.vu.mif.psk.tiekejai.domain.Supplier</class>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="validate"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.type.preferred_instant_jdbc_type" value="TIMESTAMP"/>
-            <property name="hibernate.transaction.jta.platform"
-                      value="org.hibernate.engine.transaction.jta.platform.internal.GlassFishJtaPlatform"/>
         </properties>
     </persistence-unit>
 </persistence>
